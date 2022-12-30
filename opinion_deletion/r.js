@@ -1,18 +1,19 @@
 let s, t, e;
 let resolved = false;
-function r(){
-    if (resolved != false)
-    {
-        return ;
-    }
-    else {
-        s = document.querySelectorAll('[data-testid="sidebarColumn"]'); 
-        s[0].remove(); 
+function r(s){
+    try{
+        s = document.querySelectorAll('[data-testid="sidebarColumn"]');
+        s[0].remove();
         console.log('sidebar removed');
-        resolved = true;
+    }
+    catch{
+        if (e.name = "TypeError"){
+            return;
+        }
     }
 }
+
 onscroll = () => {
-    r(); 
+    r(s); 
     t = document.querySelectorAll('[data-testid="tweetText"]'); for (e of t){e.style.display = 'none'};
 }
