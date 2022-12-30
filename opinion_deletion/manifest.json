@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "SideBar removal and tweet text removal",
+  "description": "Remove Twitters sidebar",
+  "version": "1.0",
+  "author": "¥",
+  "content_scripts": [
+	{
+	"js": ["r.js"],
+  "matches": ["https://twitter.com/*", "https://twitter.com/*/*/*"]
+	}
+  ]
+}
