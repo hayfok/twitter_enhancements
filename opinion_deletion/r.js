@@ -1,5 +1,4 @@
 let s, t, e;
-let resolved = false;
 function r(s){
     try{
         s = document.querySelectorAll('[data-testid="sidebarColumn"]');
